@@ -14,7 +14,7 @@ import (
 func main() {
 
 	opts := MQTT.NewClientOptions()
-	opts.AddBroker("mqtts://mosquitto-service.server.svc.cluster.local:8883")
+	opts.AddBroker("mqtts://mosquitto-mosquitto-nodeport.server.svc.cluster.local:8883")
 	opts.SetClientID("mqtt-subscriber")
 	opts.SetUsername(os.Getenv("username"))
 	opts.SetPassword(os.Getenv("password"))
